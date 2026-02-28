@@ -29,7 +29,10 @@ void setup() {
 }
 
 /**
- * @brief Continuously reads IR sensor and checks obstacle presence.
+ * @brief Continuously reads IR sensor and prints obstacle status.
+ *
+ * LOW  -> Obstacle detected
+ * HIGH -> No obstacle
  */
 void loop() {
 
@@ -41,4 +44,6 @@ void loop() {
     else {
         Serial.println("No Obstacle");
     }
+
+    delay(300);
 }
