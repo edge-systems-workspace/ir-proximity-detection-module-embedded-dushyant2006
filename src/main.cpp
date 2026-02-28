@@ -29,4 +29,6 @@ void setup() {
 }
 
 void loop() {
+
+    sensorState = digitalRead(IR_PIN);
 }
