@@ -17,7 +17,15 @@
 // Create variable to store sensor state
 int sensorState;
 
+/**
+ * @brief Initializes serial communication and IR sensor pin.
+ */
 void setup() {
+
+    Serial.begin(9600);
+    pinMode(IR_PIN, INPUT);
+
+    Serial.println("IR Obstacle Detection System Initialized");
 }
 
 void loop() {
