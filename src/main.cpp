@@ -28,7 +28,17 @@ void setup() {
     Serial.println("IR Obstacle Detection System Initialized");
 }
 
+/**
+ * @brief Continuously reads IR sensor and checks obstacle presence.
+ */
 void loop() {
 
     sensorState = digitalRead(IR_PIN);
+
+    if (sensorState == LOW) {
+        Serial.println("Obstacle Detected");
+    }
+    else {
+        Serial.println("No Obstacle");
+    }
 }
